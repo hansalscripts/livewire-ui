@@ -1,0 +1,36 @@
+{
+    "name": "hansalscripts/livewire-ui",
+    "homepage": "https://github.com/hansalscripts/livewire-ui",
+    "description": "Laravel Livewire UI & auth starter kit.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hansal Scripts",
+            "email": "hansal2022@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "HansalScripts\\LivewireUi\\": "src/"
+        }
+    },
+    "require": {
+        "php" : "^8.2",
+        "laravel/framework": "^11.0",
+        "livewire/livewire": "^2.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HansalScripts\\LivewireUi\\Providers\\LaravelLivewireToastsProvider",
+                "HansalScripts\\LivewireUi\\Providers\\LaravelLivewireLoaderProvider",
+                "HansalScripts\\LivewireUi\\Providers\\LaravelLivewireRoutesProvider",
+                "HansalScripts\\LivewireUi\\Providers\\LaravelBootstrapComponentsProvider",
+                "HansalScripts\\LivewireUi\\Providers\\LaravelAutomaticMigrationsProvider",
+                "HansalScripts\\LivewireUi\\Providers\\LaravelLivewireUiProvider"
+            ]
+        }
+    }
+}
