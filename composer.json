@@ -19,7 +19,7 @@
     "require": {
         "php" : "^8.2",
         "laravel/framework": "^11.0",
-        "livewire/livewire": "^2.6"
+        "livewire/livewire": "^3.4"
     },
     "extra": {
         "laravel": {
