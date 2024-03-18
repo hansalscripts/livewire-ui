@@ -33,11 +33,9 @@ but these packages are compiled into this package
 - [Laravel Automatic Migrations](https://github.com/bastinald/laravel-automatic-migrations)  ==> integrated
 - [Laravel Bootstrap Components](https://github.com/bastinald/laravel-bootstrap-components)  ==> integrated
 - [Laravel Livewire Loader](https://github.com/bastinald/laravel-livewire-loader)            ==> integrated
-- [Laravel Livewire Modals](https://github.com/bastinald/laravel-livewire-modals)      ==>Removed
 - [Laravel Livewire Routes](https://github.com/bastinald/laravel-livewire-routes)            ==> integrated
 - [Laravel Livewire Toasts](https://github.com/bastinald/laravel-livewire-toasts)            ==> integrated
-- [Laravel Timezone](https://github.com/jamesmills/laravel-timezone)                  ==>Removed
-- [Honey](https://github.com/lukeraymonddowning/honey)                                ==>Removed
+
 
 ## Installation
 
@@ -60,7 +58,7 @@ MAIL_*
 Require the package via composer:
 
 ```console
-composer require bastinald/laravel-livewire-ui
+composer require hansalscripts/livewire-ui
 ```
 
 Make base UI scaffolding:
