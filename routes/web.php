@@ -2,26 +2,27 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
-use Livewire\Commands\ComponentParser;
 use Symfony\Component\Finder\Finder;
 
 Route::middleware('web')->group(function () {
-    $path = ComponentParser::generatePathFromNamespace(config('livewire.class_namespace'));
-    $namespace = app()->getNamespace();
+    $livewireNamespace = config('livewire.class_namespace');
+    $livewirePath = base_path('app/' . str_replace('\\', '/', $livewireNamespace));
 
-    if (!is_dir($path)) {
+    if (!is_dir($livewirePath)) {
         return;
     }
 
-    foreach ((new Finder)->in($path) as $component) {
-        $component = $namespace . str_replace(
-                ['/', '.php'],
-                ['\\', ''],
-                Str::after($component->getRealPath(), realpath(app_path()) . DIRECTORY_SEPARATOR)
-            );
+    $finder = new Finder();
+    $finder->files()->in($livewirePath)->name('*.php');
 
-        if (method_exists($component, 'route')) {
-            app($component)->route()->uses($component);
+    foreach ($finder as $file) {
+        $relativePath = $file->getRelativePathname();
+        $className = $livewireNamespace . '\\' . str_replace('/', '\\', Str::before($relativePath, '.php'));
+
+        if (is_subclass_of($className, \Livewire\Component::class)) {
+            if (method_exists($className, 'route')) {
+                app()->call([$className, 'route']);
+            }
         }
     }
 });
