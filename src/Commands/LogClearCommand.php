@@ -1,6 +1,6 @@
 <?php
 
-namespace HansalScripts\LaravelLivewireUi\Commands;
+namespace HansalScripts\LivewireUi\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
