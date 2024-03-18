@@ -2,7 +2,7 @@
 
 namespace HansalScripts\LivewireUi\Providers;
 
-use Bastinald\LaravelLivewireToasts\Components\Toasts;
+use HansalScripts\LivewireUi\LaravelLivewireToasts\Components\Toasts;
 use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
 
