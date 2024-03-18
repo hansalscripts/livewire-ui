@@ -2,9 +2,9 @@
 
 namespace HansalScripts\LaravelLivewireUi\Providers;
 
-use Bastinald\LaravelLivewireUi\Commands\LogClearCommand;
-use Bastinald\LaravelLivewireUi\Commands\MakeAuthCommand;
-use Bastinald\LaravelLivewireUi\Commands\MakeUiCommand;
+use HansalScripts\LaravelLivewireUi\Commands\LogClearCommand;
+use HansalScripts\LaravelLivewireUi\Commands\MakeAuthCommand;
+use HansalScripts\LaravelLivewireUi\Commands\MakeUiCommand;
 use Illuminate\Support\ServiceProvider;
 
 class LaravelLivewireUiProvider extends ServiceProvider
