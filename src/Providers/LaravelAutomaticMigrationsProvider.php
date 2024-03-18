@@ -2,8 +2,8 @@
 
 namespace HansalScripts\LivewireUi\Providers;
 
-use Bastinald\LaravelAutomaticMigrations\Commands\MakeAModelCommand;
-use Bastinald\LaravelAutomaticMigrations\Commands\MigrateAutoCommand;
+use HansalScripts\LivewireUi\LaravelAutomaticMigrations\Commands\MakeAModelCommand;
+use HansalScripts\LivewireUi\LaravelAutomaticMigrations\Commands\MigrateAutoCommand;
 use Illuminate\Support\ServiceProvider;
 
 class LaravelAutomaticMigrationsProvider extends ServiceProvider
