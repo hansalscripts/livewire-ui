@@ -2,7 +2,7 @@
 
 namespace HansalScripts\LivewireUi\Providers;
 
-use Bastinald\LaravelLivewireLoader\Components\Loader;
+use HansalScripts\LivewireUi\LaravelLivewireLoader\Components\Loader;
 use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
 
